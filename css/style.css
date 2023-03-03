@@ -918,6 +918,7 @@ footer span {
     margin-top: 140px;
     justify-content: center;
     align-items: center;
+    
   }
 
   .contact-text h2 {
@@ -1065,6 +1066,8 @@ footer span {
     margin: 0 auto;
     margin-top: 150px;
     transform: none;
+    background-color: #222;
+
   }
 
   .about-text h2 {
@@ -1115,6 +1118,18 @@ footer span {
     text-align: center;
   }
 
+  
+  .contact-content {
+    display: flex;
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 140px;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+
+  }
+
   .contact-content ul li {
     position: relative;
     list-style: none;
@@ -1127,6 +1142,7 @@ footer span {
     align-items: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
+    
   }
 
   .contact-content ul li i {
@@ -1141,12 +1157,22 @@ footer span {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
   }
 
+  .contact-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
   footer {
     background: #006594dc;
     padding: 20px 23px;
     color: #fff;
     text-align: center;
-    margin-top: -55px;
+    margin-top: -51px;
     font-size: 10px;
   }
 }
