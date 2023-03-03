@@ -1109,21 +1109,16 @@ footer span {
     margin-top: -55px;
     font-size: 12px;
   }
-  .nav-menu {
-    position: fixed;
-    padding-left: 0;
-    padding-right: 0;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    border-radius: 0 0 20px 20px;
-    background-color: #101026;
-    text-align: center;
-    flex-direction: column;
-    width: 50%;
-    transition: 0.3s;
-    z-index: 5;
-  }
 
+  .navbar {
+    position: fixed;
+    min-height: 70px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    padding: 0 34px;
+    z-index: 5;
+    transition: all 0.3s ease;
   
+  }
 }
