@@ -1001,6 +1001,16 @@ footer span {
     text-align: center;
   }
 
+  .cards p {
+    color: #fcfc;
+    font-size: 13px;
+    line-height: 25px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  
   footer {
     background: #006594dc;
     padding: 20px 23px;
@@ -1080,6 +1090,31 @@ footer span {
     align-items: center;
   }
 
+  
+  .cards {
+    background-color: #191919;
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    opacity: .7;
+  }
+
+  .project-content a {
+    display: inline-block;
+    position: relative;
+    color: #E8F1F2;
+    font-size: 13px;
+    padding: 7px 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 2px solid #333;
+    text-align: center;
+  }
+
   .contact-content ul li {
     position: relative;
     list-style: none;
@@ -1101,13 +1136,18 @@ footer span {
     transition-delay: 0.25s;
   }
 
+  .contact-content ul li:hover {
+    width: 100px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+  }
+
   footer {
     background: #006594dc;
     padding: 20px 23px;
     color: #fff;
     text-align: center;
     margin-top: -55px;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
