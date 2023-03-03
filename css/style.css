@@ -326,7 +326,7 @@ a {
   height: 365px;
   width: 335px;
   border-radius: 20px;
-  margin: 15px;
+  margin: 8px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1099,7 +1099,7 @@ footer span {
     height: 300px;
     width: 250px;
     border-radius: 20px;
-    margin: 5px;
+    margin: 3px;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -1121,7 +1121,7 @@ footer span {
   
   .contact-content {
     display: flex;
-    width: 420px;
+    width: 300px;
     margin: 0 auto;
     margin-top: 140px;
     justify-content: center;
