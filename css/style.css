@@ -1112,6 +1112,18 @@ footer span {
 }
 
 @media (max-width: 400px) {
+  .navbar {
+    position: fixed;
+    min-height: 70px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 0 34px;
+    z-index: 5;
+    transition: all 0.3s ease;
+  
+  }
+
   .nav-menu {
     position: fixed;
     padding-left: 0;
@@ -1123,7 +1135,7 @@ footer span {
     background-color: #101026;
     text-align: center;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     transition: 0.3s;
     z-index: 5;
   }
