@@ -309,7 +309,7 @@ a {
   color: #ffffff;
   font-size: 60px;
   text-transform: capitalize;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -327,6 +327,7 @@ a {
   width: 335px;
   border-radius: 20px;
   margin: 8px;
+  margin-top: -50px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -986,7 +987,7 @@ footer span {
     color: #ffffff;
     font-size: 35px;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     text-align: center;
   }
 
