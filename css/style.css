@@ -52,7 +52,7 @@ html {
 
 .menu-navBar {
   background: #13293D;
-  /* #101026 */
+  transition: .5s;
 }
 
 li {
@@ -77,6 +77,7 @@ a {
 
 .navbar.sticky {
   background: #13293D;
+  transition: .5s;
 }
 
 .navbar .logo {
@@ -155,11 +156,11 @@ a {
 */
 
 .home {
-  /* background: #222; */
-  background-image: url("../images/fundo-desktop.jpg");
+  background-image: url("../images/fundo-inicio.jpg");
   background-size: cover;
   height: 100vh;
   width: 100%;
+  transition: .5s;
 }
 
 .homeUser .home-content {
@@ -235,6 +236,39 @@ a {
   color: #ddf0e8;
 }
 
+.iconMode {
+  width: 45px;
+  height: 25px;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-right: -30%;
+}
+
+.iconMode::before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: left .5s;
+  content: "\f186";
+  font-family: fontAwesome;
+  font-size: 19px;
+  color: #000;
+}
+
+.home.dark .iconMode::before {
+  left: 19px;
+  content: "\f185";
+  color: #00aeff;
+}
+
 /* 
 ===================================================
 ! SESSÃO SOBRE !
@@ -242,12 +276,12 @@ a {
 */
 
 .about {
-  /* background-color: #222; */
   background-image: url("../images/fundo-sobre.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh;
   padding: 100px 0px;
+  transition: .5s;
 }
 
 .about-text {
@@ -265,7 +299,7 @@ a {
 
 .about-text h2 {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
   text-align: center;
@@ -274,7 +308,7 @@ a {
 .about-text h5 {
   color: #FFF;
   letter-spacing: 2px;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 25px;
   text-transform: capitalize;
   text-align: center;
@@ -285,7 +319,7 @@ a {
   color: #fcfc;
   letter-spacing: 1px;
   line-height: 20px;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 45px;
   text-align: center;
 }
@@ -302,15 +336,25 @@ a {
   width: 100%;
   height: 100vh;
   padding: 100px 0px;
+  transition: .5s;
 }
-
 
 .project-text h2 {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 50px;
   text-transform: capitalize;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.project-text h5 {
+  color: #FFF;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+  text-align: center;
+
 }
 
 .project-menu {
@@ -386,12 +430,12 @@ a {
 ===================================================
 */
 .contact {
-  /* background-color: #222; */
   background-image: url("../images/fundo-contact.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh;
   padding: 100px 0px;
+  transition: .5s;
 }
 
 .contact-text {
@@ -418,7 +462,7 @@ a {
 .contact-text h5 {
   color: #FFF;
   letter-spacing: 2px;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 25px;
   text-transform: capitalize;
   text-align: center;
@@ -516,7 +560,6 @@ a {
   transition-delay: 0.25s;
 }
 
-
 /* 
 ===================================================
 ! SESSÃO FOOTER !
@@ -527,8 +570,9 @@ footer {
   padding: 20px 23px;
   color: #fff;
   text-align: center;
-  margin-top: -55px;
+  margin-top: -52px;
   font-size: 12px;
+  transition: .5s;
 }
 
 footer span {
@@ -555,10 +599,34 @@ footer span {
   }
 
   .about-content {
-    width: 600px;
+    width: 450px;
     margin: 0 auto;
-    margin-top: 125px;
-    margin-left: 350px;
+    margin-top: 100px;
+    transform: none;
+  }
+
+  .about-text h2 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    align-items: center;
+  }
+
+  .about-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  .about-text p {
+    font-size: 15px;
+    text-transform: capitalize;
+    align-items: center;
   }
 
 }
@@ -576,11 +644,36 @@ footer span {
   }
 
   .about-content {
-    width: 600px;
+    width: 450px;
     margin: 0 auto;
-    margin-top: 125px;
-    margin-left: 350px;
+    margin-top: 100px;
+    transform: none;
   }
+
+  .about-text h2 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    align-items: center;
+  }
+
+  .about-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  .about-text p {
+    font-size: 15px;
+    text-transform: capitalize;
+    align-items: center;
+  }
+
 
   .cards {
     background-color: #191919;
@@ -594,13 +687,24 @@ footer span {
     opacity: .7;
   }
 
+
+  .project-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
   .project-text h2 {
     color: #ffffff;
     font-size: 50px;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
   }
+
 }
 
 @media (max-width:1195px) {
@@ -627,6 +731,16 @@ footer span {
     opacity: .7;
   }
 
+  .iconMode {
+    width: 45px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 19%;
+    margin-right: -19%;
+  }
 }
 
 @media (max-width:1065px) {
@@ -758,11 +872,30 @@ footer span {
     text-align: center;
   }
 
+  .about-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  .project-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
   .project-text h2 {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 50px;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
   }
 }
@@ -868,6 +1001,10 @@ footer span {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .navbar.dark .nav-menu {
+    background-color: #27242ce1;
+  }
+
   .nav-menu {
     position: fixed;
     padding-left: 0;
@@ -894,9 +1031,43 @@ footer span {
 
   .project {
     background-image: url("../images/projeto-celular.jpg");
+    background-size: cover;
     width: 100%;
     height: 140vh;
   }
+
+  .iconMode {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 2%;
+    margin-top: 3px;
+  }
+
+  .iconMode::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    left: 1px;
+    top: 10px;
+    transition: .5s;
+    content: "\f186";
+    font-family: fontAwesome;
+    font-size: 18.5px;
+    color: #000;
+  }
+
+  .home.dark .iconMode::before {
+    left: 2px;
+    top: 11px;
+    font-size: 17px;
+    content: "\f185";
+    color: #00aeff;
+  }
+
 }
 
 @media (max-width:768px) {
@@ -985,6 +1156,7 @@ footer span {
 @media (max-width: 600px) {
   .project {
     background-image: url("../images/projeto-celular.jpg");
+    background-size: cover;
     width: 100%;
     height: 185vh;
   }
@@ -1075,11 +1247,6 @@ footer span {
     }
   }
 
-  .about {
-    background-image: url("../images/sobre-celular.jpg");
-    background-size: cover;
-  }
-
   .about-content {
     width: 300px;
     margin: 0 auto;
@@ -1135,6 +1302,14 @@ footer span {
     text-align: center;
   }
 
+  .project-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+  }
 
   .contact-content {
     display: flex;
@@ -1191,4 +1366,131 @@ footer span {
     margin-top: -51px;
     font-size: 10px;
   }
+}
+
+/* 
+================================
+  ! DARK MODE !
+================================
+*/
+
+.scroll-up-btn.dark {
+  background: #222;
+  transition: .5s;
+}
+
+.scrollDark.dark .scroll-up-btn {
+  background: #222;
+  transition: .5s;
+}
+
+.navbar.sticky.dark {
+  background: #222;
+  transition: .5s;
+}
+
+.navbar.dark .nav-link:hover {
+  color: #4e4b53;
+}
+
+.navbar.dark .logo {
+  animation: none;
+  transition: .5s;
+
+}
+
+.navbar.dark .logo span {
+  color: #4e4b53;
+  animation: none;
+}
+
+.home.dark {
+  background: url("../darkmode/inicio-dark.jpg");
+  background-size: cover;
+  transition: .5s;
+}
+
+.home.dark .home-content .text-2 {
+  color: #4e4b53;
+  animation: none;
+}
+
+.home.dark .home-content .text-2 span {
+  color: #fff;
+  animation: none;
+}
+
+.home.dark .home-content a {
+  background-color: #222;
+  border: 2px solid #ffffff0e;
+}
+
+.home.dark .home-content a:hover {
+  background-color: #4e4b53;
+}
+
+.about.dark {
+  background: url("../darkmode/sobre-dark.jpg");
+  background-size: cover;
+  transition: .5s;
+}
+
+.about.dark .about-text p {
+  color: #fff;
+}
+
+.project.dark {
+  background: #0d0d0d;
+  transition: .5s;
+}
+
+.project.dark .cards {
+  background-color: #191919;
+}
+
+.project.dark .cards:hover {
+  background-color: #3e3c42;
+  opacity: 1;
+}
+
+.project.dark .cards svg {
+  color: #fff;
+
+}
+
+.project.dark .cards p {
+  color: #fff;
+}
+
+.project.dark .project-content a {
+  background-color: #222;
+  border: 2px solid #ffffff0e;
+}
+
+.project.dark .project-content a:hover {
+  background-color: #4e4b53;
+}
+
+.contact.dark {
+  background: url("../darkmode/contato-dark.jpg");
+  background-size: cover;
+  transition: .5s;
+}
+
+.contact.dark .contact-content ul li::before {
+  background: #222;
+}
+
+.contact.dark .contact-content ul li::after {
+  background: #222;
+}
+
+.footer.dark {
+  background: #222;
+  transition: .5s;
+}
+
+footer span {
+  color: #fff;
+  text-decoration: none;
 }
