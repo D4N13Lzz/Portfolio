@@ -6,9 +6,7 @@ const footer = document.querySelector('.footer')
 const scrollDark = document.querySelector('.scrollDark')
 const navbar = document.querySelector('.navbar')
 
-
 const iconMode = document.querySelector('.iconMode')
-
     iconMode.addEventListener('click', () => {
     home.classList.toggle('dark')
     about.classList.toggle('dark')
@@ -17,5 +15,4 @@ const iconMode = document.querySelector('.iconMode')
     footer.classList.toggle('dark')
     scrollDark.classList.toggle('dark')
     navbar.classList.toggle('dark')
-
 })
