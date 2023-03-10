@@ -13,6 +13,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
 .scroll-up-btn {
   position: fixed;
   width: 35px;
@@ -132,7 +135,7 @@ a {
   color: #006494;
 }
 
-.hamburguer {
+.hamburguer {      
   display: none;
   cursor: pointer;
   padding-left: -80%;
@@ -280,7 +283,7 @@ a {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding: 100px 0px;
+  padding: 10px 0px;
   transition: .5s;
 }
 
@@ -316,12 +319,16 @@ a {
 }
 
 .about-text p {
-  color: #fcfc;
+  color: #ffffff;
   letter-spacing: 1px;
   line-height: 20px;
   font-size: 15px;
   margin-bottom: 45px;
   text-align: center;
+  background-color: #00000041;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
 }
 
 
@@ -1270,10 +1277,8 @@ footer span {
     text-transform: capitalize;
     text-align: center;
   }
-
   .about-text p {
     font-size: 12px;
-    text-transform: capitalize;
     align-items: center;
   }
 
@@ -1374,9 +1379,19 @@ footer span {
 ================================
 */
 
-.scroll-up-btn.dark {
-  background: #222;
-  transition: .5s;
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(87, 83, 83); 
+  color: #222;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;               
+} 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(87, 83, 83); 
+}
+::-webkit-scrollbar-track {
+  background:#333;
 }
 
 .scrollDark.dark .scroll-up-btn {
@@ -1405,7 +1420,7 @@ footer span {
 }
 
 .home.dark {
-  background: url("../darkmode/inicio-dark.jpg");
+  background: url("../images/darkmode/inicio-dark.jpg");
   background-size: cover;
   transition: .5s;
 }
@@ -1430,7 +1445,7 @@ footer span {
 }
 
 .about.dark {
-  background: url("../darkmode/sobre-dark.jpg");
+  background: url("../images/darkmode/sobre-dark.jpg");
   background-size: cover;
   transition: .5s;
 }
@@ -1472,7 +1487,7 @@ footer span {
 }
 
 .contact.dark {
-  background: url("../darkmode/contato-dark.jpg");
+  background: url("../images/darkmode/contato-dark.jpg");
   background-size: cover;
   transition: .5s;
 }
