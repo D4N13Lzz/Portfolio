@@ -587,6 +587,12 @@ footer span {
   text-decoration: none;
 }
 
+.badge-base a {
+  color: #fcfc;
+}
+.badge-base a:hover {
+  color: #f10000f3;
+}
 
 /* 
 ===================================================
