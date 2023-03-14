@@ -22,16 +22,23 @@ $(document).ready(function () {
         loop: true
     });
     var typed = new Typed(".typing-2", {
-        strings: ["Meu nome é Daniel eu estou cursando o 3°Ano do ensino médio, possuo diversos cursos refente a aréa de programação e meus estudos são focados em Front-end."],
+        strings: ["Front-end"],
         typeSpeed: 100,
-        backSpeed: 60,
+        backSpeed: 100,
         loop: true
 
     });
     var typed = new Typed(".typing-3", {
+        strings: ["Alguns dos meu projetos:"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+
+    });
+    var typed = new Typed(".typing-4", {
         strings: ["Entre em contato comigo a baixo:"],
         typeSpeed: 100,
-        backSpeed: 60,
+        backSpeed: 100,
         loop: true
 
     });

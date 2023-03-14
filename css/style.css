@@ -13,6 +13,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
 .scroll-up-btn {
   position: fixed;
   width: 35px;
@@ -52,7 +55,7 @@ html {
 
 .menu-navBar {
   background: #13293D;
-  /* #101026 */
+  transition: .5s;
 }
 
 li {
@@ -77,6 +80,7 @@ a {
 
 .navbar.sticky {
   background: #13293D;
+  transition: .5s;
 }
 
 .navbar .logo {
@@ -131,7 +135,7 @@ a {
   color: #006494;
 }
 
-.hamburguer {
+.hamburguer {      
   display: none;
   cursor: pointer;
   padding-left: -80%;
@@ -155,11 +159,11 @@ a {
 */
 
 .home {
-  /* background: #222; */
-  background-image: url("../images/fundo-desktop.jpg");
+  background-image: url("../images/fundo-inicio.jpg");
   background-size: cover;
   height: 100vh;
   width: 100%;
+  transition: .5s;
 }
 
 .homeUser .home-content {
@@ -235,6 +239,39 @@ a {
   color: #ddf0e8;
 }
 
+.iconMode {
+  width: 45px;
+  height: 25px;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-right: -30%;
+}
+
+.iconMode::before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: left .5s;
+  content: "\f186";
+  font-family: fontAwesome;
+  font-size: 19px;
+  color: #000;
+}
+
+.home.dark .iconMode::before {
+  left: 19px;
+  content: "\f185";
+  color: #fcfc;
+}
+
 /* 
 ===================================================
 ! SESSÃO SOBRE !
@@ -242,12 +279,12 @@ a {
 */
 
 .about {
-  /* background-color: #222; */
   background-image: url("../images/fundo-sobre.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding: 100px 0px;
+  padding: 10px 0px;
+  transition: .5s;
 }
 
 .about-text {
@@ -265,7 +302,7 @@ a {
 
 .about-text h2 {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 50px;
   text-transform: capitalize;
   margin-bottom: 20px;
   text-align: center;
@@ -274,7 +311,7 @@ a {
 .about-text h5 {
   color: #FFF;
   letter-spacing: 2px;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 25px;
   text-transform: capitalize;
   text-align: center;
@@ -282,12 +319,16 @@ a {
 }
 
 .about-text p {
-  color: #fcfc;
+  color: #ffffff;
   letter-spacing: 1px;
   line-height: 20px;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 45px;
   text-align: center;
+  background-color: #00000041;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
 }
 
 
@@ -302,15 +343,25 @@ a {
   width: 100%;
   height: 100vh;
   padding: 100px 0px;
+  transition: .5s;
 }
-
 
 .project-text h2 {
   color: #ffffff;
-  font-size: 60px;
+  font-size: 50px;
   text-transform: capitalize;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.project-text h5 {
+  color: #FFF;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+  text-align: center;
+
 }
 
 .project-menu {
@@ -326,7 +377,8 @@ a {
   height: 365px;
   width: 335px;
   border-radius: 20px;
-  margin: 15px;
+  margin: 8px;
+  margin-top: -50px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -385,16 +437,18 @@ a {
 ===================================================
 */
 .contact {
-  /* background-color: #222; */
   background-image: url("../images/fundo-contact.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh;
   padding: 100px 0px;
+  transition: .5s;
 }
+
 .contact-text {
   width: 550px;
 }
+
 .contact-content {
   display: flex;
   width: 900px;
@@ -403,6 +457,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .contact-text h2 {
   color: #ffffff;
   font-size: 60px;
@@ -410,14 +465,16 @@ a {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .contact-text h5 {
   color: #FFF;
   letter-spacing: 2px;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 25px;
   text-transform: capitalize;
   text-align: center;
 }
+
 .contact-content ul {
   position: relative;
   display: flex;
@@ -426,11 +483,12 @@ a {
   align-items: center;
   padding: 30px;
 }
+
 .contact-content ul li {
   position: relative;
   list-style: none;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 60px;
   cursor: pointer;
   display: flex;
@@ -439,10 +497,12 @@ a {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
 }
+
 .contact-content ul li:hover {
   width: 180px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
 }
+
 .contact-content ul li::before {
   content: '';
   position: absolute;
@@ -452,9 +512,11 @@ a {
   opacity: 0;
   transition: 0.5s;
 }
+
 .contact-content ul li:hover::before {
   opacity: 1;
 }
+
 .contact-content ul li::after {
   content: '';
   position: absolute;
@@ -468,37 +530,42 @@ a {
   z-index: -1;
   filter: blur(15px);
 }
+
 .contact-content ul li:hover::after {
   opacity: 0.5;
 }
+
 .contact-content ul li i {
   color: #fcfc;
   font-size: 1.75em !important;
   transition: 0.5s;
   transition-delay: 0.25s;
 }
+
 .contact-content ul li:hover i {
   transform: scale(0);
   font-size: 1.75em;
   transition-delay: 0.25s;
 }
+
 .contact-content ul li span {
   position: absolute;
 }
+
 .contact-content ul li .titulo {
   color: #fff;
-  font-size: 1.1em !important;
+  font-size: 12px !important;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transform: scale(0);
   transition: 0.5s;
   transition-delay: 0s;
 }
+
 .contact-content ul li:hover .titulo {
   transform: scale(1);
   transition-delay: 0.25s;
 }
-
 
 /* 
 ===================================================
@@ -510,12 +577,16 @@ footer {
   padding: 20px 23px;
   color: #fff;
   text-align: center;
-  margin-top: -55px;
+  margin-top: -52px;
+  font-size: 12px;
+  transition: .5s;
 }
+
 footer span {
   color: #fcfc;
   text-decoration: none;
 }
+
 
 /* 
 ===================================================
@@ -535,10 +606,34 @@ footer span {
   }
 
   .about-content {
-    width: 600px;
+    width: 450px;
     margin: 0 auto;
-    margin-top: 125px;
-    margin-left: 350px;
+    margin-top: 100px;
+    transform: none;
+  }
+
+  .about-text h2 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    align-items: center;
+  }
+
+  .about-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  .about-text p {
+    font-size: 15px;
+    text-transform: capitalize;
+    align-items: center;
   }
 
 }
@@ -556,11 +651,36 @@ footer span {
   }
 
   .about-content {
-    width: 600px;
+    width: 450px;
     margin: 0 auto;
-    margin-top: 125px;
-    margin-left: 350px;
+    margin-top: 100px;
+    transform: none;
   }
+
+  .about-text h2 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    align-items: center;
+  }
+
+  .about-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  .about-text p {
+    font-size: 15px;
+    text-transform: capitalize;
+    align-items: center;
+  }
+
 
   .cards {
     background-color: #191919;
@@ -574,13 +694,24 @@ footer span {
     opacity: .7;
   }
 
+
+  .project-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
   .project-text h2 {
     color: #ffffff;
     font-size: 50px;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
   }
+
 }
 
 @media (max-width:1195px) {
@@ -607,6 +738,16 @@ footer span {
     opacity: .7;
   }
 
+  .iconMode {
+    width: 45px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 19%;
+    margin-right: -19%;
+  }
 }
 
 @media (max-width:1065px) {
@@ -738,11 +879,30 @@ footer span {
     text-align: center;
   }
 
+  .about-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  .project-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
   .project-text h2 {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 50px;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
   }
 }
@@ -814,8 +974,8 @@ footer span {
   .contact-content ul li {
     position: relative;
     list-style: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 60px;
     cursor: pointer;
     display: flex;
@@ -848,6 +1008,10 @@ footer span {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .navbar.dark .nav-menu {
+    background-color: #27242ce1;
+  }
+
   .nav-menu {
     position: fixed;
     padding-left: 0;
@@ -856,7 +1020,7 @@ footer span {
     top: 70px;
     gap: 0;
     border-radius: 0 0 20px 20px;
-    background-color: #101026;
+    background-color: #101026fa;
     text-align: center;
     flex-direction: column;
     width: 100%;
@@ -874,9 +1038,43 @@ footer span {
 
   .project {
     background-image: url("../images/projeto-celular.jpg");
+    background-size: cover;
     width: 100%;
     height: 140vh;
   }
+
+  .iconMode {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 2%;
+    margin-top: 3px;
+  }
+
+  .iconMode::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    left: 1px;
+    top: 10px;
+    transition: .5s;
+    content: "\f186";
+    font-family: fontAwesome;
+    font-size: 18.5px;
+    color: #000;
+  }
+
+  .home.dark .iconMode::before {
+    left: 2px;
+    top: 11px;
+    font-size: 17px;
+    content: "\f185";
+    color: #fcfc;
+  }
+
 }
 
 @media (max-width:768px) {
@@ -917,6 +1115,7 @@ footer span {
     margin-top: 140px;
     justify-content: center;
     align-items: center;
+
   }
 
   .contact-text h2 {
@@ -940,8 +1139,8 @@ footer span {
   .contact-content ul li {
     position: relative;
     list-style: none;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 60px;
     cursor: pointer;
     display: flex;
@@ -964,6 +1163,7 @@ footer span {
 @media (max-width: 600px) {
   .project {
     background-image: url("../images/projeto-celular.jpg");
+    background-size: cover;
     width: 100%;
     height: 185vh;
   }
@@ -984,7 +1184,7 @@ footer span {
     color: #ffffff;
     font-size: 35px;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     text-align: center;
   }
 
@@ -999,6 +1199,16 @@ footer span {
     border: 2px solid #333;
     text-align: center;
   }
+
+  .cards p {
+    color: #fcfc;
+    font-size: 13px;
+    line-height: 25px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
 
   footer {
     background: #006594dc;
@@ -1044,11 +1254,6 @@ footer span {
     }
   }
 
-  .about {
-    background-image: url("../images/sobre-celular.jpg");
-    background-size: cover;
-  }
-
   .about-content {
     width: 300px;
     margin: 0 auto;
@@ -1072,12 +1277,235 @@ footer span {
     text-transform: capitalize;
     text-align: center;
   }
-
   .about-text p {
     font-size: 12px;
-    text-transform: capitalize;
     align-items: center;
   }
 
 
+  .cards {
+    background-color: #191919;
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    margin: 3px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    opacity: .7;
+  }
+
+  .project-content a {
+    display: inline-block;
+    position: relative;
+    color: #E8F1F2;
+    font-size: 13px;
+    padding: 7px 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 2px solid #333;
+    text-align: center;
+  }
+
+  .project-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .contact-content {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 140px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contact-content ul li {
+    position: relative;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+
+  }
+
+  .contact-content ul li i {
+    color: #fcfc;
+    font-size: 1.5em !important;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+  }
+
+  .contact-content ul li:hover {
+    width: 100px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+  }
+
+  .contact-text h5 {
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+
+  footer {
+    background: #006594dc;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+    margin-top: -51px;
+    font-size: 10px;
+  }
+}
+
+/* 
+================================
+  ! DARK MODE !
+================================
+*/
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(87, 83, 83); 
+  color: #222;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;               
+} 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(87, 83, 83); 
+}
+::-webkit-scrollbar-track {
+  background:#333;
+}
+
+.scrollDark.dark .scroll-up-btn {
+  background: #222;
+  transition: .5s;
+}
+
+.navbar.sticky.dark {
+  background: #222;
+  transition: .5s;
+}
+
+.navbar.dark .nav-link:hover {
+  color: #4e4b53;
+}
+
+.navbar.dark .logo {
+  animation: none;
+  transition: .5s;
+
+}
+
+.navbar.dark .logo span {
+  color: #4e4b53;
+  animation: none;
+}
+
+.home.dark {
+  background: url("../images/darkmode/inicio-dark.jpg");
+  background-size: cover;
+  transition: .5s;
+}
+
+.home.dark .home-content .text-2 {
+  color: #4e4b53;
+  animation: none;
+}
+
+.home.dark .home-content .text-2 span {
+  color: #fff;
+  animation: none;
+}
+
+.home.dark .home-content a {
+  background-color: #222;
+  border: 2px solid #ffffff0e;
+}
+
+.home.dark .home-content a:hover {
+  background-color: #4e4b53;
+}
+
+.about.dark {
+  background: url("../images/darkmode/sobre-dark.jpg");
+  background-size: cover;
+  transition: .5s;
+}
+
+.about.dark .about-text p {
+  color: #fff;
+}
+
+.project.dark {
+  background: #0d0d0d;
+  transition: .5s;
+}
+
+.project.dark .cards {
+  background-color: #191919;
+}
+
+.project.dark .cards:hover {
+  background-color: #3e3c42;
+  opacity: 1;
+}
+
+.project.dark .cards svg {
+  color: #fff;
+
+}
+
+.project.dark .cards p {
+  color: #fff;
+}
+
+.project.dark .project-content a {
+  background-color: #222;
+  border: 2px solid #ffffff0e;
+}
+
+.project.dark .project-content a:hover {
+  background-color: #4e4b53;
+}
+
+.contact.dark {
+  background: url("../images/darkmode/contato-dark.jpg");
+  background-size: cover;
+  transition: .5s;
+}
+
+.contact.dark .contact-content ul li::before {
+  background: #222;
+}
+
+.contact.dark .contact-content ul li::after {
+  background: #222;
+}
+
+.footer.dark {
+  background: #222;
+  transition: .5s;
+}
+
+footer span {
+  color: #fff;
+  text-decoration: none;
 }
