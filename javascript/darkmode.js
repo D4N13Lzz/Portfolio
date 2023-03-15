@@ -70,3 +70,4 @@ function updateTheme(theme) {
     iconMode.classList.remove('dark');
   }
 }
+// DarkMode com autosave
