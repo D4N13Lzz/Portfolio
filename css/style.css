@@ -383,6 +383,7 @@ a {
   margin-right: 20px;
   border-radius: 50%;
   object-fit: cover;
+  transition: .5s;
 }
 
 .about-me p {
@@ -1207,6 +1208,8 @@ footer span {
   .darkMenu {
     margin-left: 71%;
     margin-right: -71%;
+    transition: .5s;
+
   }
 }
 
@@ -1224,6 +1227,7 @@ footer span {
   .iconMode {
     width: 25px;
     height: 25px;
+    transition: .5s;
   }
 
   .iconMode::before {
@@ -1235,6 +1239,7 @@ footer span {
     margin-left: 3px;
     font-size: 16px;
     color: #fff;
+    transition: .5s;
   }
 
   .darkMenu .dark-mode-text {
@@ -1247,7 +1252,6 @@ footer span {
     margin-left: 10px;
     margin-top: 5px;
     font-size: 15px;
-
   }
 
 }
@@ -1618,6 +1622,8 @@ body::-webkit-scrollbar-thumb {
 .about.dark .about-me {
   background-color: #222;
   box-shadow: 0 2px 20px #303030;
+transition: .5s;
+
 }
 
 
